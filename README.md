@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martina Okafor | PR & Real Estate Consultant | Bangkok</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.7;
+            color: #1a1a2e;
+            background: #ffffff;
+        }
+
+        header {
+            background: #0f1419;
+            padding: 1.2rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .hero {
+            background: #0f1419;
+            color: white;
+            padding: 140px 2rem 80px;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.8rem;
+            color: #ffffff;
+            font-weight: 600;
+            letter-spacing: -1px;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: rgba(255,255,255,0.8);
+            font-weight: 400;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .hero-contact {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .hero-contact a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            transition: opacity 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .hero-contact a:hover {
+            opacity: 0.7;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 2rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #0f1419;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        .section-intro {
+            font-size: 1.05rem;
+            color: #5a5a5a;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
+        .services-list {
+            background: #fafafa;
+            padding: 2rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            border: 1px solid #e8e8e8;
+        }
+
+        .services-list h3 {
+            color: #0f1419;
+            margin-bottom: 1.2rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .services-list ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .services-list li {
+            padding: 0.6rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #5a5a5a;
+            font-size: 0.95rem;
+        }
+
+        .services-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #0f1419;
+            font-size: 1.2rem;
+        }
+
+        .recent-work {
+            background: #ffffff;
+            padding: 2rem;
+            border-left: 3px solid #0f1419;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .recent-work h3 {
+            color: #0f1419;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .recent-work ul {
+            list-style: none;
+        }
+
+        .recent-work li {
+            padding: 0.5rem 0;
+            color: #5a5a5a;
+            font-size: 0.95rem;
+        }
+
+        .cta-box {
+            background: #fafafa;
+            color: #0f1419;
+            padding: 2.5rem;
+            border-radius: 4px;
+            text-align: center;
+            margin: 3rem 0;
+            border: 1px solid #e8e8e8;
+        }
+
+        .cta-box p {
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+            color: #5a5a5a;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #0f1419;
+            color: white;
+            padding: 0.9rem 2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .cta-button:hover {
+            background: #1a1f2e;
+        }
+
+        .property-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .property-card {
+            background: #ffffff;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid #e8e8e8;
+            transition: box-shadow 0.3s;
+        }
+
+        .property-card:hover {
+            box-shadow: 0 8px 24px rgba(15, 20, 25, 0.1);
+        }
+
+        .property-image {
+            width: 100%;
+            height: 200px;
+            background: #fafafa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d0d0d0;
+            font-size: 3rem;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .property-body {
+            padding: 1.5rem;
+        }
+
+        .property-body h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: #0f1419;
+            font-weight: 600;
+        }
+
+        .property-details {
+            color: #5a5a5a;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .property-price {
+            color: #0f1419;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            color: #0f1419;
+            margin: 3rem 0 1rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid #e8e8e8;
+            font-weight: 600;
+        }
+
+        .about {
+            background: #fafafa;
+            border-top: 1px solid #e8e8e8;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .about-content {
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.9;
+            color: #5a5a5a;
+            font-size: 1.05rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-section {
+            background: #ffffff;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: #fafafa;
+            border-radius: 4px;
+            border: 1px solid #e8e8e8;
+        }
+
+        .contact-item h3 {
+            color: #0f1419;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .contact-item a {
+            color: #0f1419;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .contact-item a:hover {
+            opacity: 0.7;
+        }
+
+        .form-section {
+            background: #fafafa;
+            border-top: 1px solid #e8e8e8;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #0f1419;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #e8e8e8;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            background: #ffffff;
+            color: #1a1a2e;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #0f1419;
+        }
+
+        .form-section-title {
+            font-size: 1.3rem;
+            color: #0f1419;
+            margin: 2rem 0 1.5rem;
+            font-weight: 600;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e8e8e8;
+        }
+
+        .submit-button {
+            background: #0f1419;
+            color: white;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background: #1a1f2e;
+        }
+
+        footer {
+            background: #0f1419;
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 2.5rem;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            h2 {
+                font-size: 1.7rem;
+            }
+
+            .hero-contact {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+
+            .property-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Martina Okafor</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#pr">PR Services</a></li>
+                <li><a href="#realestate">Real Estate</a></li>
+                <li><a href="#form">Client Form</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Martina Okafor</h1>
+        <p class="tagline">PR & Real Estate Consultant | Bangkok, Thailand<br>
+        Helping Thai brands go global and connecting clients with homes that fit their lifestyle.</p>
+        <div class="hero-contact">
+            <a href="mailto:tinamokafor@gmail.com">📧 tinamokafor@gmail.com</a>
+            <a href="tel:+66802564947">📱 +66 80 256 4947</a>
+            <a href="http://www.linkedin.com/in/martinaokafor" target="_blank">🔗 LinkedIn</a>
+            <a href="https://www.behance.net/tinamokafoed62" target="_blank">💼 Portfolio</a>
+        </div>
+    </section>
+
+    <section id="pr">
+        <h2>Public Relations</h2>
+        <p class="section-intro">I help brands communicate with clarity, confidence, and warmth — from PR strategy and press release translation to storytelling that connects with the right audience. Whether it's in Thai or English, I make sure every message sounds natural, human, and professional.</p>
+        
+        <div class="services-list">
+            <h3>Services</h3>
+            <ul>
+                <li>Thai-English press release translation (investor-facing tone)</li>
+                <li>Corporate and lifestyle content writing</li>
+                <li>Brand & PR strategy development</li>
+                <li>Media pitching and communication planning</li>
+                <li>Proposal and presentation copywriting</li>
+            </ul>
+        </div>
+
+        <div class="recent-work">
+            <h3>Recent Work</h3>
+            <ul>
+                <li><strong>SC Asset</strong> – Investor-facing press release translations</li>
+                <li><strong>Agrow Agency</strong> – English communications, client pitching & PR content</li>
+                <li><strong>Lifestyle & Real Estate brands</strong> – Freelance PR and marketing support</li>
+            </ul>
+        </div>
+
+        <div class="cta-box">
+            <p>If your brand is ready to build an international presence, I'd love to help.<br>I will send portfolios and company's profile upon request.</p>
+            <a href="#contact" class="cta-button">Contact Me</a>
+        </div>
+    </section>
+
+    <section id="realestate">
+        <h2>Real Estate</h2>
+        <p class="section-intro">I connect buyers, renters, and investors with spaces that match their goals and lifestyle — specializing in Bangkok's Sukhumvit area. I also help owners market and present their properties with storytelling that sells.</p>
+        
+        <div class="services-list">
+            <h3>Services</h3>
+            <ul>
+                <li>Property sourcing & viewing coordination</li>
+                <li>Marketing and sales listings for owners</li>
+                <li>Real estate copywriting (Thai–English)</li>
+                <li>Market insight & location consultation</li>
+            </ul>
+        </div>
+
+        <h3 class="category-title">Condos for Sale in Bangkok</h3>
+        <p style="margin-bottom: 2rem; color: #5a5a5a;">Prime locations across Sukhumvit and Bangna</p>
+        
+        <div class="property-grid">
+            <div class="property-card">
+                <div class="property-image">🏢</div>
+                <div class="property-body">
+                    <h3>Artemis</h3>
+                    <div class="property-details">
+                        <strong>1 Bedroom</strong> | 31.36 sq.m.<br>
+                        📍 Sukhumvit 77
+                    </div>
+                    <div class="property-price">2.4 Million THB</div>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <div class="property-image">🏢</div>
+                <div class="property-body">
+                    <h3>The Extro by Singha Estate</h3>
+                    <div class="property-details">
+                        <strong>1 Bedroom</strong> | 35+ sq.m.<br>
+                        📍 BTS Victory Monument & MRT Ratchaprarop
+                    </div>
+                    <div class="property-price">8 Million THB+</div>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <div class="property-image">🏢</div>
+                <div class="property-body">
+                    <h3>The Privacy by Pruksa</h3>
+                    <div class="property-details">
+                        <strong>1 Bedroom</strong> | 27.22 sq.m.<br>
+                        📍 Sukhumvit 101
+                    </div>
+                    <div class="property-price">2.6 Million THB</div>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <div class="property-image">🏢</div>
+                <div class="property-body">
+                    <h3>Wellington Condo</h3>
+                    <div class="property-details">
+                        <strong>1 Bedroom</strong> | 63.38 sq.m.<br>
+                        📍 Soi Ramkhamhaeng 40
+                    </div>
+                    <div class="property-price">3.6 Million THB</div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="category-title">Houses for Sale (All over Thailand)</h3>
+        
+        <div class="property-grid">
+            <div class="property-card">
+                <div class="property-image">🏠</div>
+                <div class="property-body">
+                    <h3>Chayada Biz Place</h3>
+                    <div class="property-details">
+                        <strong>3 Bedrooms | 4 Bathrooms</strong><br>
+                        1 multipurpose room | 3.5-storey home office<br>
+                        📍 Bangkok
+                    </div>
+                    <div class="property-price">15.5 Million THB</div>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <div class="property-image">🏠</div>
+                <div class="property-body">
+                    <h3>Belgravia, Bangna – Rama 9</h3>
+                    <div class="property-details">
+                        <strong>4 Bedrooms | 5 Bathrooms</strong><br>
+                        340 sq.m.<br>
+                        📍 Bangkok
+                    </div>
+                    <div class="property-price">32.9 Million THB</div>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <div class="property-image">🏠</div>
+                <div class="property-body">
+                    <h3>Grand Britania Krungthep Kreetha</h3>
+                    <div class="property-details">
+                        <strong>4 Bedrooms | 5 Bathrooms</strong><br>
+                        📍 Suvarnabhumi, Bangkok
+                    </div>
+                    <div class="property-price">20 Million THB</div>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <div class="property-image">🏠</div>
+                <div class="property-body">
+                    <h3>Wiang Nam Lom</h3>
+                    <div class="property-details">
+                        <strong>4 Bedrooms | 5 Bathrooms</strong><br>
+                        2-storey | 300 sq.m.<br>
+                        📍 Chiang Mai
+                    </div>
+                    <div class="property-price">9.9 Million THB</div>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <div class="property-image">🏠</div>
+                <div class="property-body">
+                    <h3>Eden Luxury Villas</h3>
+                    <div class="property-details">
+                        <strong>4 Bedrooms | 5 Bathrooms</strong><br>
+                        2 Living Rooms | 379 sq.m.<br>
+                        📍 Pattaya
+                    </div>
+                    <div class="property-price">12.6 Million THB</div>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <div class="property-image">🏠</div>
+                <div class="property-body">
+                    <h3>Luxury Riverfront House</h3>
+                    <div class="property-details">
+                        <strong>4 Bedrooms | 5 Bathrooms</strong><br>
+                        350 sq.m.<br>
+                        📍 Surat Thani
+                    </div>
+                    <div class="property-price">5 Million THB</div>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <div class="property-image">🏠</div>
+                <div class="property-body">
+                    <h3>Bless Town</h3>
+                    <div class="property-details">
+                        <strong>3 Bedrooms | 3 Bathrooms</strong><br>
+                        182 sq.m.<br>
+                        📍 Bangkok
+                    </div>
+                    <div class="property-price">3.9 Million THB</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-box" style="margin-top: 3rem;">
+            <p>Contact Tina (Co-agent)<br>080-256-4947 (LINE/WhatsApp)</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <section id="form" class="form-section">
+        <h2>Real Estate Client Form</h2>
+        <p class="section-intro">Please fill out this form so I can better understand your property needs and find the perfect match for you.</p>
+        
+        <div class="form-container">
+            <form id="clientForm">
+                <div class="form-section-title">Client's Profile</div>
+                
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nationality">Nationality *</label>
+                    <input type="text" id="nationality" name="nationality" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="visa">Visa *</label>
+                    <input type="text" id="visa" name="visa" placeholder="e.g., Tourist, Business, ED, etc." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="university">University/Work *</label>
+                    <input type="text" id="university" name="university" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="field">Studies/Field *</label>
+                    <input type="text" id="field" name="field" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="moveInDate">Move-In Date *</label>
+                    <input type="date" id="moveInDate" name="moveInDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="buyOrRent">Buy or Rent *</label>
+                    <select id="buyOrRent" name="buyOrRent" required>
+                        <option value="">Select...</option>
+                        <option value="Buy">Buy</option>
+                        <option value="Rent">Rent</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="rentDurationGroup" style="display: none;">
+                    <label for="rentDuration">If Rent, Duration</label>
+                    <input type="text" id="rentDuration" name="rentDuration" placeholder="e.g., 6 months, 1 year">
+                </div>
+
+                <div class="form-section-title">Housing Requirements</div>
+
+                <div class="form-group">
+                    <label for="area">Area/Zone *</label>
+                    <input type="text" id="area" name="area" placeholder="e.g., Sukhumvit, Silom, etc." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="budget">Budget (THB) *</label>
+                    <input type="text" id="budget" name="budget" placeholder="e.g., 15,000 - 25,000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sqm">Square Meters (sqm) *</label>
+                    <input type="text" id="sqm" name="sqm" placeholder="e.g., 30-50 sqm" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="additionalInfo">Additional Information</label>
+                    <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Any other preferences or requirements..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Submit Form</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>I'm a PR specialist and real estate consultant based in Bangkok. My passion lies in helping people find clarity — in their message, their brand, or their home.</p>
+            <p>I've worked with corporate brands, developers, and entrepreneurs who want communication that sounds authentic, not robotic.</p>
+            <p>When I'm not working, you'll find me at the gym, exploring new cafes, or working on my wellness and personal growth journey.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Get In Touch</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p><a href="mailto:tinamokafor@gmail.com">tinamokafor@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>Phone / LINE / WhatsApp</h3>
+                <p><a href="tel:+66802564947">+66 80 256 4947</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>LinkedIn</h3>
+                <p><a href="http://www.linkedin.com/in/martinaokafor" target="_blank">linkedin.com/in/martinaokafor</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>Portfolio</h3>
+                <p><a href="https://www.behance.net/tinamokafoed62" target="_blank">behance.net/tinamokafoed62</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>This page was created to share my work and passions — thanks for stopping by.</p>
+        <p style="margin-top: 0.5rem;">&copy; 2025 Martina Okafor. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Show/hide rent duration field based on selection
+        document.getElementById('buyOrRent').addEventListener('change', function() {
+            const rentDurationGroup = document.getElementById('rentDurationGroup');
+            if (this.value === 'Rent') {
+                rentDurationGroup.style.display = 'block';
+            } else {
+                rentDurationGroup.style.display = 'none';
+            }
+        });
+
+        // Handle form submission
+        document.getElementById('clientForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            let emailBody = 'NEW REAL ESTATE CLIENT INQUIRY\n\n';
+            emailBody += 'CLIENT PROFILE\n';
+            emailBody += '─────────────\n';
+            emailBody += `Name: ${formData.get('name')}\n`;
+            emailBody += `Nationality: ${formData.get('nationality')}\n`;
+            emailBody += `Visa: ${formData.get('visa')}\n`;
+            emailBody += `University/Work: ${formData.get('university')}\n`;
+            emailBody += `Studies/Field: ${formData.get('field')}\n`;
+            emailBody += `Move-In Date: ${formData.get('moveInDate')}\n`;
+            emailBody += `Buy or Rent: ${formData.get('buyOrRent')}\n`;
+            if (formData.get('rentDuration')) {
+                emailBody += `Rent Duration: ${formData.get('rentDuration')}\n`;
+            }
+            emailBody += '\nHOUSING REQUIREMENTS\n';
+            emailBody += '─────────────────────\n';
+            emailBody += `Area/Zone: ${formData.get('area')}\n`;
+            emailBody += `Budget: ${formData.get('budget')} THB\n`;
+            emailBody += `Square Meters: ${formData.get('sqm')}\n`;
+            
